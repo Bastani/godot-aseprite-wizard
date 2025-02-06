@@ -8,15 +8,15 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 - Aseprite Texture importer and Tileset Importer do not generate a png file anymore, and have type `PortableCompressedTexture2D` instead of `AtlasTexture`. If you use the png file, you should change the references to the aseprite file instead.
 - Aseprite SpriteFrames importer does not generate extra png file anymore
-- Organised importer properties.
-    - If you changed the default sheet options or layer options, they will be reverted to the default values on next import. Make sure to set them again before this happens
-- Renamed SpriteFrames importer id (internal).
+- Organised importer properties. If you use sheet or layer options, they will be reverted to the default values on next import. Make sure to set them again before this happens
+- Renamed SpriteFrames importer id (internal). Might not cause breaking changes, but there is a chance importer properties will be reset.
 
 ### Added
 - New split importers (Static Texture, SpriteFrames). These importers should be used for exporting each layer in a Aseprite file as a separate resource. These resource are plain files that will hold the info to generate the file independently.
-    - This will prevent issues with unstable ids which happens when the import folder is removed and new files are generated. In these cases, even though the resulting files are the same, they have different interal references causing them to be shown as changed in version control.
+    - This will prevent issues with unstable ids which happen when the import folder is removed and new files are generated.
     - This will also allow cleanup to happen on split importers. i.e. when a layer is removed from the aseprite file, its resource will also be removed in Godot.
 - Importer docks now can embed the spritesheet texture in the scene, not requiring generating external png files. This option will be enabled by default.
+- Implemented improved sheet options in the SpriteFrames importer.
 
 ### Changed
 
@@ -25,9 +25,9 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
     - Does not generate extra png file anymore.
 - Aseprite SpriteFrames importer:
     - Does not generate extra png file anymore.
-- Organised importer properties (layer related under layers section and implemented improved sheet options for SpriteFrames).
+- Organised importer properties (layers section and implemented improved sheet options for SpriteFrames).
     - Any already existing import will revert to default values unless set correctly.
-- Renamed SpriteFrames importer id for consistency
+- Renamed SpriteFrames importer id for consistency (internal).
 - Removed Split option from SpriteFrames importer. Split are handled in separate importers.
 
 ### Removed
