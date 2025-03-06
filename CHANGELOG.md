@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Breaking changes
 
+- Requires Godot >=4.3
 - Aseprite Texture importer and Tileset Importer do not generate a png file anymore, and have type `PortableCompressedTexture2D` instead of `AtlasTexture`. If you use the png file, you should change the references to the aseprite file instead.
 - Aseprite SpriteFrames importer does not generate extra png file anymore
 - Organised importer properties. If you use sheet or layer options, they will be reverted to the default values on next import. Make sure to set them again before this happens
@@ -33,6 +34,10 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Removed
 
 - Removed option to disable the exporter plugin, because now it's required for importing textures correctly.
+
+### Thanks
+
+- Thanks @LeXeS2 for identifying these changes don't work in version 4.2 and bellow.
 
 ## 8.2.0 (2024-11-22)
 
