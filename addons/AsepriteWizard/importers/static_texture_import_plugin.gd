@@ -26,8 +26,8 @@ func _get_priority():
 func _get_import_options(_path, _i):
 	return [
 		{"name": "layer/exclude_layers_pattern", "default_value": config.get_default_exclusion_pattern()},
-		{"name": "layer/only_visible_layers",    "default_value": false},
-		{"name": "first_frame_only",    	 	 "default_value": true},
+		{"name": "layer/only_visible_layers", "default_value": false},
+		{"name": "first_frame_only", "default_value": true},
 		{
 			"name": "sheet/sheet_type",
 			"default_value": "packed",
@@ -50,7 +50,7 @@ func _import(source_file, save_path, options, platform_variants, gen_files):
 		"output_filename": '',
 		"output_folder": source_path,
 	}
-	
+
 	if options['first_frame_only']:
 		aseprite_opts['first_frame_only'] = options['first_frame_only']
 	else:
