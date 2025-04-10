@@ -109,7 +109,8 @@ func _load_old_data(source_file: String):
 		if d is JSON:
 			old_data = d.data.layers
 		elif d is PackedDataContainer:
-			old_data = _packed_container_to_dictionary(d["layers"])
+			if d["layers"] != null:
+				old_data = _packed_container_to_dictionary(d["layers"])
 
 	return old_data
 
