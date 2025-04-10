@@ -21,8 +21,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Thanks
 
 - Thanks @Bastani for suggesting and implementing the texture importers improvements.
-- Thansk @lashtear and @jupsky for detecting and reporting the Tileset importer issue.
-- Thanks @jupsky for reporting the 'Multiple file' importer type caveat and @Bastani for identifying the root cause.
+- Thansk @lashtear and @juspky for detecting and reporting the Tileset importer issue.
+- Thanks @juspky for reporting the 'Multiple file' importer type caveat and @Bastani for identifying the root cause.
 
 
 ## 9.0.0 (2025-02-06)
