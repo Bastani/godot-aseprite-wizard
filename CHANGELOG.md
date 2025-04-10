@@ -2,7 +2,7 @@
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
-## Unreleased
+## 9.1.0 (2025-04-10)
 
 ### Added
 
@@ -12,7 +12,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Changed
 
 - Better error message when Tileset importer fails due to bad data file. Now it warns the user that the file should have at least one tilemap layer.
-- "Multiple file" importers (Texture split, SpritaFrames split) saves root file as PackedDataContainer instead of JSON to prevent them from opening in the script editor.
+- "Multiple file" importers (Texture split, SpritaFrames split) save root file as PackedDataContainer instead of JSON to prevent them from opening in the script editor.
 
 ### Fixed
 
