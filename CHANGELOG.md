@@ -5,6 +5,19 @@ nav_max: 1
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
+## 9.2.0 (2025-05-08)
+
+### Added
+
+- Added support for spritesheet frame padding on Texture and SpriteFrames importers
+- Added LICENSE file to addons folder so it's shipped with plugin.
+
+### Thanks
+
+- @aekobear for implemeting the frame padding support.
+- @mpewsey for adding the LICENSE file.
+
+
 ## 9.1.0 (2025-04-10)
 
 ### Added
