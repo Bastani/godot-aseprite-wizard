@@ -5,6 +5,20 @@ nav_max: 1
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
+## 9.3.0 (2025-05-13)
+
+### Added
+
+- Support UIDs in docks. When Godot UIDs are enabled the docks will be able to keep track when the file is moved.
+
+### Fixed
+
+- Fix scary warnings when loading images.
+
+### Thanks
+
+- @conde2 for suggesting the UID feature.
+
 ## 9.2.0 (2025-05-08)
 
 ### Added
