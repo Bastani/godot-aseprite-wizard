@@ -35,3 +35,16 @@ Both the default configuration and the exception prefix can be changed in the co
 ## Import overwrite previous files
 
 This is expected behaviour, import overwrites previously imported files. Any manual modification in the previous resource file will be lost.
+
+## Why Libresprite doesn't work with this plugin?
+
+Libresprite is an open source alternative to Aseprite that was forked from the last version of Aseprite with a GPL license. A lot changed in Aseprite since the fork,
+and Libresprite hasn't kept up with it (and I don't think that's even its goal).
+
+At the time of writing this, Libresprite hasn't had a new release since around 2 years ago, and the only other version released was published 2 years before that.
+Keeping this plugin compatible with such an old implementation would require more effort and time, and given how little progress Libresprite is having, I can't justify that.
+
+Here are a few alternatives I can recommend if you can't afford Aseprite:
+
+- If you don't mind using an outdated version, you can downlod [Aseprite Wizard version 7.2.0](https://github.com/viniciusgerevini/godot-aseprite-wizard/releases/tag/v7.2.0-4), which is the last version without major incompatibilities with Libresprite. Keep in mind a lot of bug fixes and improvement happened since then, so it might not be the best experience.
+- Even though Aseprite is not free, it allows you to compile it from the source and use it with no cost, even for commercial games. This does take time and effort, but it's a good alternative for the tech savvy.
