@@ -57,6 +57,10 @@ func _import(source_file, save_path, options, platform_variants, gen_files):
 
 	var layers_resources_folder = options["output/layers_resources_folder"]
 
+	if layers_resources_folder.begins_with('./'):
+		var source_base_dir = source_file.get_base_dir();
+		layers_resources_folder = source_base_dir + layers_resources_folder.erase(0)
+
 	var import_options = _get_base_import_options(options)
 	import_options["source"] = source_file
 
