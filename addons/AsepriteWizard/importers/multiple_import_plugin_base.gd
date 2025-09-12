@@ -52,7 +52,8 @@ func _import(source_file, save_path, options, platform_variants, gen_files):
 		absolute_source_file,
 		exception_pattern,
 		should_include_only_visibles,
-		should_merge_duplicates
+		should_merge_duplicates,
+		true
 	)
 
 	var layers_resources_folder = options["output/layers_resources_folder"]
@@ -76,7 +77,8 @@ func _import(source_file, save_path, options, platform_variants, gen_files):
 	}
 
 	for layer in layers:
-		var layer_save_path = "%s_l_%s.%s" % [base_name, layer, _layer_extension()]
+		var flat_layer_name = (layer as String).replace("/", "_")
+		var layer_save_path = "%s_%s.%s" % [base_name, flat_layer_name, _layer_extension()]
 		var file = FileAccess.open(layer_save_path, FileAccess.WRITE)
 		file.store_string(JSON.stringify({
 			"layer": layer,
