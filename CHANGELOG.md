@@ -5,6 +5,21 @@ nav_max: 1
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
+## 9.6.0 (2025-10-08)
+
+### Changed
+
+- Frames are listed using `--list-layer-hierarchy`, preventing name conflict between layers in different groups
+
+### Fixed
+
+- SpriteFrames importers: Textures not updated in editor after re-import
+
+### Thanks
+
+- Thanks @DeniZka for implementing the layer hierarchy improvement
+- Thansk @ThalwegIII for finding the fix for the texture cache issue
+
 ## 9.5.1 (2025-09-08)
 
 ### Fixed
